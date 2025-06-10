@@ -12,10 +12,13 @@ export default defineConfig({
       formats: ['es']
     },
     rollupOptions: {
-      external: ['lit'],
+      external: ['lit', 'react', 'react-dom', '@lit/react'],
       output: {
         globals: {
-          lit: 'Lit'
+          lit: 'Lit',
+          react: 'React',
+          'react-dom': 'ReactDOM',
+          '@lit/react': 'LitReact'
         }
       }
     },
